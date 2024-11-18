@@ -78,7 +78,7 @@ export class SubscriptionComponent implements OnInit {
   updateSubscription(plan: string): void {
     const userId = this.getUserIdFromJwt();
     if (userId) {
-      console.log('Updating subscription for user: ', userId, plan);
+      
       this.subscriptionService.updateSubscription(userId, plan);
     }
   }

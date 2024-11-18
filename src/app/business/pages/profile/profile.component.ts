@@ -114,7 +114,7 @@ export class ProfileComponent implements OnInit {
       if (this.newPassword) {
         this.user.password = this.newPassword;
       }
-      console.log(this.user);
+      
       // this.userService.updateUser(this.user).subscribe(
       //   () => {
       //     location.reload();

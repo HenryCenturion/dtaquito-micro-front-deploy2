@@ -128,7 +128,7 @@ export class SportSpacesComponent implements OnInit {
             this.sportSpaceService.getAllSportSpaces().subscribe((data: SportSpace[]) => {
               this.sportSpaces = data;
               this.filteredSportSpaces = data;
-              console.log('Sport spaces:', data);
+              
             });
           }
         },

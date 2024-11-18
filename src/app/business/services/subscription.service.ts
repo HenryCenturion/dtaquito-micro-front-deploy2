@@ -29,13 +29,13 @@ export class SubscriptionService {
       this.http.put(`${this.baseUrl}/suscriptions/upgrade/subscription`, {}, { headers, params, responseType: 'text' })
         .subscribe(
           (response: string) => {
-            console.log('Respuesta de actualización:', response);
+            
 
             // Extraer el enlace de pago de la respuesta en texto plano
             const match = response.match(/paymentLink=(https?:\/\/[^\s]+)/);
             if (match && match[1]) {
               const paymentLink = match[1];
-              console.log('Enlace de pago extraído:', paymentLink);
+              
 
               // Abrir la URL en una ventana emergente
               const paymentWindow = window.open(paymentLink, 'Payment', 'width=1200,height=800');

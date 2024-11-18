@@ -47,13 +47,13 @@ export class CreateDepositDialogComponent implements OnInit {
       const amount = this.depositForm.get('amount')?.value;
       this.depositService.createDeposit(amount).subscribe(
         (data: string) => {
-          console.log('Enlace de pago:', data);
+          
 
           // Extraer el enlace de la respuesta de texto plano
           const match = data.match(/paymentLink=(https?:\/\/[^\s]+)/);
           if (match && match[1]) {
             const paymentLink = match[1];
-            console.log('Enlace de pago extraído:', paymentLink);
+            
 
             // Abrir la URL en una ventana emergente
             const paymentWindow = window.open(paymentLink, 'Payment', 'width=800,height=800');

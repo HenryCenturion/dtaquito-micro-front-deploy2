@@ -115,7 +115,7 @@ export class RoomsComponent implements OnInit {
   getAllRooms(): void {
     this.roomService.getAllRooms().subscribe(
       (data: any) => {
-        console.log('Rooms', data);
+        
         this.rooms = data;
         this.rooms.forEach(room => {
           this.getPlayerList(room.id);
