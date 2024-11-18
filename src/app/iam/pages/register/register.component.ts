@@ -36,7 +36,7 @@ import {TranslatePipe} from "@ngx-translate/core";
 export class RegisterComponent implements OnInit {
   nameFormControl = new FormControl('', [Validators.required]);
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
-  passwordFormControl = new FormControl('', [Validators.required]);
+  passwordFormControl = new FormControl('', [Validators.required, Validators.minLength(8)]);
   roleFormControl = new FormControl('', [Validators.required]);
   subscriptionFormControl = new FormControl('', [Validators.required]);
   bankAccountFormControl = new FormControl('', [Validators.required, Validators.email]);

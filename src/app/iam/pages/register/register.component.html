@@ -88,6 +88,7 @@
             >
             <div class="text-red-600 text-sm ml-3" *ngIf="passwordFormControl.touched">
               <p *ngIf="passwordFormControl?.hasError('required')">{{ 'principalPage.passwordRequired' | translate }}</p>
+              <p *ngIf="passwordFormControl?.hasError('minlength') && !passwordFormControl?.hasError('required')">{{ 'principalPage.passwordMinLength' | translate }}</p>
             </div>
           </div>
 
